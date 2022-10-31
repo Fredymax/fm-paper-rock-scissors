@@ -42,8 +42,10 @@ const { typeOption, nameIcon } = toRefs(props);
 const icon = ref(null);
 
 watchEffect(async () => {
+  const newImage = new URL(`/src/assets/${nameIcon.value}`, import.meta.url);
   if (nameIcon.value && nameIcon.value !== "default") {
-    icon.value = (await import(`/src/assets/${nameIcon.value}`)).default;
+    // icon.value = (await import(`/src/assets/${nameIcon.value}`)).default;
+    icon.value = newImage.href;
   }
 });
 
