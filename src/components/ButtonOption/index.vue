@@ -43,7 +43,7 @@ const icon = ref(null);
 
 watchEffect(async () => {
   if (nameIcon.value && nameIcon.value !== "default") {
-    icon.value = (await import(`../../assets/${nameIcon.value}`)).default;
+    icon.value = (await import(`/src/assets/${nameIcon.value}`)).default;
   }
 });
 

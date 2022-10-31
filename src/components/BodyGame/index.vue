@@ -79,8 +79,6 @@ function restartGame() {
   game.playing = false;
 }
 
-function verifyWinner(userPicked, computerPicked) {}
-
 async function handleClickChoose(selected) {
   game.userSelection = selected;
   game.playing = true;
