@@ -1,0 +1,98 @@
+@import '../../variables';
+img {
+  text-transform: capitalize;
+}
+
+.option__container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1em;
+  & > span {
+    letter-spacing: 0.125em;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+}
+
+.option {
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 130px;
+  block-size: 130px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    inline-size: 200px !important;
+    block-size: 200px !important;
+  }
+  
+  &.default {
+    background: hsl(237deg 48% 15%);
+    box-shadow: none;
+    .option__content {
+      box-shadow: unset;
+      background: hsl(237deg 48% 15%);
+    }
+  }
+
+  &.paper {
+    background-image: $paper;
+    box-shadow: 0 4px 0 1px #2747c2;
+    &.winner {
+      box-shadow: 0 4px 0 1px #2747c2, 0 0 20vw 25px hsl(0deg 0% 100% / 50%);
+    }
+  }
+
+  &.rock {
+    background-image: $rock;
+    box-shadow: 0 4px 0 1px #9e1737;
+    &.winner {
+      box-shadow: 0 4px 0 1px #9e1737, 0 0 20vw 25px hsl(0deg 0% 100% / 50%);
+    }
+  }
+
+  &.scissors {
+    background-image: $scissors;
+    box-shadow: 0 4px 0 1px #c6701b;
+    &.winner {
+      box-shadow: 0 4px 0 1px #c6701b, 0 0 20vw 25px hsl(0deg 0% 100% / 50%);
+    }
+  }
+
+  &__content {
+    inline-size: 100px;
+    block-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border-radius: inherit;
+    box-shadow: inset 0 3px 0 1px #bfc1d8;
+    @media (min-width: 768px) {
+      inline-size: 153px;
+      block-size: 153px;
+    }
+    img {
+      inline-size: 44px;
+      block-size: 53px;
+      @media (min-width: 768px) {
+        inline-size: 72px;
+        block-size: 80px;
+      }
+    }
+  }
+  &:active,
+  &:hover{
+    scale: 0.97;
+  }
+  &.default:active,
+  &.default:hover {
+    scale: 1 !important;
+  }
+}

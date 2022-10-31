@@ -1,0 +1,14 @@
+[
+  {
+    "typeIcon": "paper",
+    "nameIcon": "icon-paper.svg"
+  },
+  {
+    "typeIcon": "scissors",
+    "nameIcon": "icon-scissors.svg"
+  },
+  {
+    "typeIcon": "rock",
+    "nameIcon": "icon-rock.svg"
+  }
+]

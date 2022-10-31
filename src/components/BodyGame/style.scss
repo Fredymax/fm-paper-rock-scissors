@@ -1,0 +1,62 @@
+@import '../../variables';
+
+.game {
+  inline-size: 100%;
+  max-inline-size: 700px;
+  margin-inline: auto;
+  block-size: auto;
+  background: no-repeat center/50% url(../../assets/bg-triangle.svg);
+  @media (min-width: 768px) {
+    background-size: 45%;
+  }
+  &__options {
+    @media (min-width: 768px) {
+      inline-size: 476px;
+      margin: auto;
+    }
+  }
+  &.in-game {
+    background: none;
+    .group {
+      &:nth-child(even) {
+        display: none;
+      }
+    }
+  }
+  .group {
+    &:nth-child(even) {
+      display: flex;
+      justify-content: center;
+    }
+    &:nth-child(odd) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__message {
+    margin-block-start: 70px;
+    text-align: center;
+    text-transform: uppercase;
+    h1 {
+      font-size: 56px;
+      letter-spacing: 0.005em;
+      text-align: center;
+      margin-block-end: 15px;
+    }
+    button {
+      padding-inline: 58px;
+      padding-block: 15px;
+      font-family: inherit;
+      font-weight: 600;
+      border-radius: 5px;
+      border: none;
+      color: $dark-text;
+      text-transform: inherit;
+      cursor: pointer;
+      &:active,
+      &:hover {
+        scale: 0.98;
+      }
+    }
+  }
+}
